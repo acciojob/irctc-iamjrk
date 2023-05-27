@@ -1,0 +1,35 @@
+IRCTC
+
+You are an avid traveler and are on a mission to travel the India and explore its beautiful cities.
+
+You decide to take this journey by train and you came across this website IRCTC. Being a backend engineer you 
+try to build this as a project to understand how models would have been working.
+
+Complete the IRCTC code from the template.
+
+Explanations :
+
+In Train Model : String route means a concatenation of the different Stations in a String format Suppose 
+in Enum there are 6 stations A,B,C,D,E,F and train goes from B to D and then to A The route String will be like “B,D,A”
+
+In AddTrainEntryDto : The attribute contains the list of enum values of stations that will be sent from the postman. 
+0th index value will denote the start station and 1 index the next station and so on, converting these list items into a String route.
+
+departureTime : This is the time it takes to start from the first station and to reach the next station it will take 1 hour. 
+You can safely assume that throughout the journey of the train on the route planned the date will never change, ie 
+The train will start from the first station and reach the last destination within 24 hours and on the same date. (between 00:00:00 — 23:59:59) on any date.
+
+In TicketEntity :
+
+Fare System : Between every consecutive stations the price is 300 Rs. Suppose the route is A -> B -> C -> D. incase 
+we want to go from A to C the price will be 600, in case we want to go from A -> D, the totalFare will be equal to 900 and so on.
+
+Assumptions :
+
+All the people who have booked under the same ticket will board the train from the same station.
+
+Important pointers : Don’t use the Lombok Library (Getter, Setter,AllArgsConstructor,NoArgsConstructor)
+
+You can’t change the existing code/cannot add any other Repository in the service Layer
+
+Don't use the builder annotations in converters from Dto to Entity Objects. Create an object using a new keyword and set the attributes accordingly.
